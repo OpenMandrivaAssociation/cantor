@@ -10,7 +10,6 @@ Patch1: kdeedu-4.6.90-cantor-rpath.patch
 BuildRequires: kdelibs4-devel >= 2:%{version}
 BuildRequires: pkgconfig(libR)
 BuildRequires: pkgconfig(libspectre)
-BuildRequires: kalgebra-devel
 
 %description
 Cantor is a KDE Application aimed to provide a nice Interface 
