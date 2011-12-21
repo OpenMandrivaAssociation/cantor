@@ -38,6 +38,7 @@ Backends.
 %_kde_libdir/kde4/cantor_helppanelplugin.so
 %_kde_libdir/kde4/cantor_variablemanagerplugin.so
 %_kde_libdir/kde4/cantor_rbackend.so
+%_kde_libdir/kde4/cantor_scilabbackend.so
 %_kde_libdir/kde4/libcantorpart.so
 %_kde_libdir/libcantor_config.so
 %_kde_datadir/applications/kde4/cantor.desktop
@@ -47,12 +48,15 @@ Backends.
 %_kde_iconsdir/*/*/apps/octavebackend.png
 %_kde_iconsdir/*/*/apps/rbackend.png
 %_kde_iconsdir/*/*/apps/sagebackend.png
+%_kde_iconsdir/*/*/apps/qalculatebackend.png
+%_kde_iconsdir/*/*/apps/scilabbackend.png
 %_kde_configdir/cantor*.knsrc
 %_kde_datadir/config.kcfg/cantor.kcfg
 %_kde_datadir/config.kcfg/cantor_libs.kcfg
 %_kde_datadir/config.kcfg/octavebackend.kcfg
 %_kde_datadir/config.kcfg/maximabackend.kcfg
 %_kde_datadir/config.kcfg/sagebackend.kcfg
+%_kde_datadir/config.kcfg/scilabbackend.kcfg
 %_kde_datadir/config.kcfg/rserver.kcfg
 %_kde_services/cantor
 %_kde_servicetypes/cantor_assistant.desktop
