@@ -1,6 +1,6 @@
 Name:		cantor
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
-Version: 4.8.2
+Version: 4.8.3
 Release: 1
 Group:		Graphical desktop/KDE
 License:	GPLv2
