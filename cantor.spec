@@ -1,13 +1,13 @@
 Name:		cantor
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
-Version: 4.8.97
-Release: 1
+Version:	4.8.97
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2
 URL:		http://edu.kde.org/cantor/
 Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/%{name}-%{version}.tar.xz
 Patch1:		kdeedu-4.6.90-cantor-rpath.patch
-BuildRequires:	kdelibs4-devel >= 2:%{version}
+BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(libspectre)
 BuildRequires:	pkgconfig(libqalculate)
@@ -20,6 +20,8 @@ its own Computation Logic, but instead is built around different
 Backends.
 
 %files
+%doc README TODO
+%doc %{_kde_docdir}/HTML/en/cantor
 %{_kde_bindir}/cantor
 %{_kde_bindir}/cantor_rserver
 %{_kde_libdir}/kde4/cantor_creatematrixassistant.so
@@ -46,7 +48,7 @@ Backends.
 %{_kde_libdir}/kde4/cantor_scilabbackend.so
 %{_kde_libdir}/kde4/libcantorpart.so
 %{_kde_libdir}/libcantor_config.so
-%{_kde_datadir}/applications/kde4/cantor.desktop
+%{_kde_applicationsdir}/cantor.desktop
 %{_kde_appsdir}/cantor
 %{_kde_iconsdir}/*/*/apps/cantor.*
 %{_kde_iconsdir}/*/*/apps/maximabackend.png
@@ -68,24 +70,23 @@ Backends.
 %{_kde_servicetypes}/cantor_assistant.desktop
 %{_kde_servicetypes}/cantor_backend.desktop
 %{_kde_servicetypes}/cantor_panelplugin.desktop
-%doc README TODO
-%doc %{_kde_docdir}/HTML/en/cantor
 
 #---------------------------------------------
 
-%define cantorlibs_major 0
+%define cantorlibs_major 1
 %define libcantorlibs %mklibname cantorlibs %{cantorlibs_major}
 
 %package -n %{libcantorlibs}
 Summary:	Runtime library for cantor
 Group:		System/Libraries
+Obsoletes:	%{mklibname cantorlibs 0} < %{EVRD}
 
 %description -n %{libcantorlibs}
 Runtime library for cantor
 
 %files -n %{libcantorlibs}
-%{_kde_libdir}/libcantorlibs.so.%{cantorlibs_major}*
-%{_kde_libdir}/libcantorlibs.so.1
+%{_kde_libdir}/libcantorlibs.so.0*
+%{_kde_libdir}/libcantorlibs.so.%{cantorlibs_major}
 
 #---------------------------------------------
 
