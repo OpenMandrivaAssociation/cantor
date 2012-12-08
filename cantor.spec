@@ -1,7 +1,7 @@
 Name:		cantor
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
-Version: 4.9.3
-Release: 1
+Version:	4.9.4
+Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2
 URL:		http://edu.kde.org/cantor/
@@ -115,4 +115,66 @@ Files needed to build applications based on %{name}.
 
 %install
 %makeinstall_std -C build
+
+%changelog
+* Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
+- New version 4.9.4
+
+* Wed Nov 07 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.3-1
+- New version 4.9.3
+
+* Thu Oct 04 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.2-1
+- New version 4.9.2
+
+* Sat Sep 08 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.1-1
+- New version 4.9.1
+
+* Mon Aug 13 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.0-1
+- New version 4.9.0
+
+* Thu Jul 19 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.8.97-1
+- New version 4.8.97
+
+* Mon Jul 02 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.8.95-1
+- New version 4.8.95
+- libcantorlibs major should be 1, not 0
+
+* Fri Jun 08 2012 Arkady L. Shane <arkady.shane@rosalab.ru> 4.8.4-1
+- update to 4.8.4
+
+* Thu May 10 2012 Arkady L. Shane <arkady.shane@rosalab.ru> 4.8.3-1
+- update to 4.8.3
+
+* Sun Mar 11 2012 Arkady L. Shane <arkady.shane@rosalab.ru> 4.8.2-1
+- update to 4.8.2
+
+* Sun Mar 11 2012 Arkady L. Shane <arkady.shane@rosalab.ru> 4.8.1-1
+- update to 4.8.1
+
+* Sun Feb 26 2012 Andrey Bondrov <abondrov@mandriva.org> 4.8.0-2
++ Revision: 780807
+- Add BR pkgconfig(libqalculate) and analitza-devel, update file list
+
+* Thu Jan 19 2012 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.8.0-1
++ Revision: 762442
+- New upstream tarball
+
+* Fri Jan 06 2012 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.7.97-1
++ Revision: 758033
+- New upstream tarball
+
+* Thu Dec 22 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.7.95-1
++ Revision: 744509
+- New upstream tarball
+
+* Thu Dec 22 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.7.90-1
++ Revision: 744238
+- Fix file list
+- Fix BR
+- New upstream tarball
+- New upstream tarball 4.7.80
+
+* Mon Nov 14 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.7.41-1
++ Revision: 730560
+- Import cantor
 
