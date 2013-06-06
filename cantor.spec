@@ -1,10 +1,10 @@
-Name:		cantor
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
-Version:	4.10.3
+Name:		cantor
+Version:	4.10.4
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2
-URL:		http://edu.kde.org/cantor/
+Url:		http://edu.kde.org/cantor/
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 Patch1:		kdeedu-4.6.90-cantor-rpath.patch
 BuildRequires:	kdelibs4-devel
@@ -117,6 +117,9 @@ Files needed to build applications based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Wed Jun 05 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.4-1
+- New version 4.10.4
+
 * Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
 - New version 4.10.3
 
