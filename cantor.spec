@@ -38,6 +38,7 @@ Backends.
 %{_kde_libdir}/kde4/cantor_maximabackend.so
 %{_kde_libdir}/kde4/cantor_nullbackend.so
 %{_kde_libdir}/kde4/cantor_octavebackend.so
+%{_kde_libdir}/kde4/cantor_python2backend.so
 %{_kde_libdir}/kde4/cantor_plot2dassistant.so
 %{_kde_libdir}/kde4/cantor_plot3dassistant.so
 %{_kde_libdir}/kde4/cantor_qalculatebackend.so
@@ -65,6 +66,7 @@ Backends.
 %{_kde_datadir}/config.kcfg/cantor_libs.kcfg
 %{_kde_datadir}/config.kcfg/maximabackend.kcfg
 %{_kde_datadir}/config.kcfg/octavebackend.kcfg
+%{_kde_datadir}/config.kcfg/python2backend.kcfg
 %{_kde_datadir}/config.kcfg/qalculatebackend.kcfg
 %{_kde_datadir}/config.kcfg/rserver.kcfg
 %{_kde_datadir}/config.kcfg/sagebackend.kcfg
