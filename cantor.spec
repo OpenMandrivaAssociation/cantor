@@ -3,15 +3,16 @@ Name:		cantor
 Version:	4.12.1
 Release:	1
 Group:		Graphical desktop/KDE
-License:	GPLv2
+License:	GPLv2+
 Url:		http://edu.kde.org/cantor/
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 Patch1:		kdeedu-4.6.90-cantor-rpath.patch
+BuildRequires:	analitza-devel
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(libspectre)
 BuildRequires:	pkgconfig(libqalculate)
-BuildRequires:	analitza-devel
+BuildRequires:	pkgconfig(python)
 
 %description
 Cantor is a KDE Application aimed to provide a nice Interface
@@ -24,28 +25,29 @@ Backends.
 %doc %{_kde_docdir}/HTML/en/cantor
 %{_kde_bindir}/cantor
 %{_kde_bindir}/cantor_rserver
+%{_kde_libdir}/kde4/cantor_advancedplotassistant.so
 %{_kde_libdir}/kde4/cantor_creatematrixassistant.so
 %{_kde_libdir}/kde4/cantor_differentiateassistant.so
 %{_kde_libdir}/kde4/cantor_eigenvaluesassistant.so
 %{_kde_libdir}/kde4/cantor_eigenvectorsassistant.so
+%{_kde_libdir}/kde4/cantor_helppanelplugin.so
+%{_kde_libdir}/kde4/cantor_importpackageassistant.so
 %{_kde_libdir}/kde4/cantor_integrateassistant.so
 %{_kde_libdir}/kde4/cantor_invertmatrixassistant.so
+%{_kde_libdir}/kde4/cantor_kalgebrabackend.so
 %{_kde_libdir}/kde4/cantor_maximabackend.so
 %{_kde_libdir}/kde4/cantor_nullbackend.so
 %{_kde_libdir}/kde4/cantor_octavebackend.so
-%{_kde_libdir}/kde4/cantor_kalgebrabackend.so
-%{_kde_libdir}/kde4/cantor_qalculatebackend.so
-%{_kde_libdir}/kde4/cantor_qalculateplotassistant.so
-%{_kde_libdir}/kde4/cantor_runscriptassistant.so
-%{_kde_libdir}/kde4/cantor_sagebackend.so
-%{_kde_libdir}/kde4/cantor_solveassistant.so
 %{_kde_libdir}/kde4/cantor_plot2dassistant.so
 %{_kde_libdir}/kde4/cantor_plot3dassistant.so
-%{_kde_libdir}/kde4/cantor_advancedplotassistant.so
-%{_kde_libdir}/kde4/cantor_helppanelplugin.so
-%{_kde_libdir}/kde4/cantor_variablemanagerplugin.so
+%{_kde_libdir}/kde4/cantor_qalculatebackend.so
+%{_kde_libdir}/kde4/cantor_qalculateplotassistant.so
 %{_kde_libdir}/kde4/cantor_rbackend.so
+%{_kde_libdir}/kde4/cantor_runscriptassistant.so
+%{_kde_libdir}/kde4/cantor_sagebackend.so
 %{_kde_libdir}/kde4/cantor_scilabbackend.so
+%{_kde_libdir}/kde4/cantor_solveassistant.so
+%{_kde_libdir}/kde4/cantor_variablemanagerplugin.so
 %{_kde_libdir}/kde4/libcantorpart.so
 %{_kde_libdir}/libcantor_config.so
 %{_kde_applicationsdir}/cantor.desktop
@@ -53,19 +55,20 @@ Backends.
 %{_kde_iconsdir}/*/*/apps/cantor.*
 %{_kde_iconsdir}/*/*/apps/maximabackend.png
 %{_kde_iconsdir}/*/*/apps/octavebackend.png
+%{_kde_iconsdir}/*/*/apps/pythonbackend.png
+%{_kde_iconsdir}/*/*/apps/qalculatebackend.png
 %{_kde_iconsdir}/*/*/apps/rbackend.png
 %{_kde_iconsdir}/*/*/apps/sagebackend.png
-%{_kde_iconsdir}/*/*/apps/qalculatebackend.png
 %{_kde_iconsdir}/*/*/apps/scilabbackend.png
 %{_kde_configdir}/cantor*.knsrc
 %{_kde_datadir}/config.kcfg/cantor.kcfg
 %{_kde_datadir}/config.kcfg/cantor_libs.kcfg
-%{_kde_datadir}/config.kcfg/octavebackend.kcfg
 %{_kde_datadir}/config.kcfg/maximabackend.kcfg
+%{_kde_datadir}/config.kcfg/octavebackend.kcfg
+%{_kde_datadir}/config.kcfg/qalculatebackend.kcfg
+%{_kde_datadir}/config.kcfg/rserver.kcfg
 %{_kde_datadir}/config.kcfg/sagebackend.kcfg
 %{_kde_datadir}/config.kcfg/scilabbackend.kcfg
-%{_kde_datadir}/config.kcfg/rserver.kcfg
-%{_kde_datadir}/config.kcfg/qalculatebackend.kcfg
 %{_kde_services}/cantor
 %{_kde_servicetypes}/cantor_assistant.desktop
 %{_kde_servicetypes}/cantor_backend.desktop
@@ -119,6 +122,7 @@ Files needed to build applications based on %{name}.
 %changelog
 * Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.1-1
 - New version 4.12.1
+- Update files and BuildRequires (python)
 
 * Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.4-1
 - New version 4.11.4
