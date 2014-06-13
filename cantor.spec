@@ -5,8 +5,7 @@ Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://edu.kde.org/cantor/
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
-Patch1:		kdeedu-4.6.90-cantor-rpath.patch
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	analitza-devel
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(libR)
@@ -87,7 +86,7 @@ Group:		System/Libraries
 Obsoletes:	%{mklibname cantorlibs 0} < %{EVRD}
 
 %description -n %{libcantorlibs}
-Runtime library for cantor
+Runtime library for cantor.
 
 %files -n %{libcantorlibs}
 %{_kde_libdir}/libcantorlibs.so.0*
@@ -112,7 +111,6 @@ Files needed to build applications based on %{name}.
 
 %prep
 %setup -q
-%apply_patches
 
 %build
 %cmake_kde4
@@ -124,6 +122,7 @@ Files needed to build applications based on %{name}.
 %changelog
 * Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.2-1
 - New version 4.13.2
+- Drop cantor-rpath patch (fixed upstream)
 
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.4-1
 - New version 4.12.4
