@@ -2,8 +2,8 @@ Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
 Version:	4.14.1
 Release:	1
-Group:		Graphical desktop/KDE
 License:	GPLv2+
+Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	analitza-devel
@@ -53,6 +53,7 @@ Backends.
 %{_kde_applicationsdir}/cantor.desktop
 %{_kde_appsdir}/cantor
 %{_kde_iconsdir}/*/*/apps/cantor.*
+%{_kde_iconsdir}/*/*/apps/luabackend.png
 %{_kde_iconsdir}/*/*/apps/maximabackend.png
 %{_kde_iconsdir}/*/*/apps/octavebackend.png
 %{_kde_iconsdir}/*/*/apps/pythonbackend.png
@@ -61,8 +62,10 @@ Backends.
 %{_kde_iconsdir}/*/*/apps/sagebackend.png
 %{_kde_iconsdir}/*/*/apps/scilabbackend.png
 %{_kde_configdir}/cantor*.knsrc
+%{_kde_datadir}/appdata/cantor.appdata.xml
 %{_kde_datadir}/config.kcfg/cantor.kcfg
 %{_kde_datadir}/config.kcfg/cantor_libs.kcfg
+%{_kde_datadir}/config.kcfg/kalgebrabackend.kcfg
 %{_kde_datadir}/config.kcfg/maximabackend.kcfg
 %{_kde_datadir}/config.kcfg/octavebackend.kcfg
 %{_kde_datadir}/config.kcfg/python2backend.kcfg
@@ -122,6 +125,7 @@ Files needed to build applications based on %{name}.
 %changelog
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
+- Update files
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
