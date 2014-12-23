@@ -1,6 +1,6 @@
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	14.12.0
+Version:	4.14.3
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -33,7 +33,7 @@ Backends.
 %{_kde_libdir}/kde4/cantor_importpackageassistant.so
 %{_kde_libdir}/kde4/cantor_integrateassistant.so
 %{_kde_libdir}/kde4/cantor_invertmatrixassistant.so
-%{_kde_libdir}/kde4/cantor_luabackend.so
+%{_kde_libdir}/kde4/cantor_kalgebrabackend.so
 %{_kde_libdir}/kde4/cantor_maximabackend.so
 %{_kde_libdir}/kde4/cantor_nullbackend.so
 %{_kde_libdir}/kde4/cantor_octavebackend.so
@@ -65,7 +65,7 @@ Backends.
 %{_kde_datadir}/appdata/cantor.appdata.xml
 %{_kde_datadir}/config.kcfg/cantor.kcfg
 %{_kde_datadir}/config.kcfg/cantor_libs.kcfg
-%{_kde_datadir}/config.kcfg/luabackend.kcfg
+%{_kde_datadir}/config.kcfg/kalgebrabackend.kcfg
 %{_kde_datadir}/config.kcfg/maximabackend.kcfg
 %{_kde_datadir}/config.kcfg/octavebackend.kcfg
 %{_kde_datadir}/config.kcfg/python2backend.kcfg
