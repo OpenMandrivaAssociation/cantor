@@ -9,11 +9,12 @@ Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	analitza-devel
-BuildRequires:	kdelibs4-devel
+BuildRequires:	kdelibs-devel
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(libspectre)
 BuildRequires:	pkgconfig(libqalculate)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(luajit)
 BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5Pty)
 BuildRequires:	cmake(KF5Config)
@@ -105,13 +106,10 @@ Files needed to build applications based on %{name}.
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake	-DKDE_INSTALL_USE_QT_SYS_PATH:BOOL=TRUE \
-	-DPYTHON_INCLUDE_DIR:PATH=%{_includedir}/python2.7 \
-	-DPYTHON_LIBRARY:PATH=%{_libdir}/libpython2.7.so \
-	-G Ninja
-ninja
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja install -C build
+%ninja_install -C build
