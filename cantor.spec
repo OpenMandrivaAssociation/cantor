@@ -45,7 +45,7 @@ Backends.
 %{_libdir}/libcantor_config.so
 %{_libdir}/libcantor_pythonbackend.so
 %{_sysconfdir}/xdg/cantor*
-%{_libdir}/plugins/*cantor*.so
+%_qt5_plugindir/*cantor*.so
 %{_datadir}/applications/org.kde.cantor.desktop
 %{_datadir}/cantor
 %{_iconsdir}/*/*/apps/cantor.*
@@ -57,7 +57,7 @@ Backends.
 %{_iconsdir}/*/*/apps/rbackend.png
 %{_iconsdir}/*/*/apps/sagebackend.png
 %{_iconsdir}/*/*/apps/scilabbackend.png
-%{_datadir}/appdata/cantor.appdata.xml
+%{_datadir}/appdata/org.kde.cantor.appdata.xml
 %{_datadir}/config.kcfg/cantor.kcfg
 %{_datadir}/config.kcfg/cantor_libs.kcfg
 %{_datadir}/config.kcfg/kalgebrabackend.kcfg
