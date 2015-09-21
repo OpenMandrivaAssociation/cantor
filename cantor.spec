@@ -2,8 +2,8 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	15.04.3
-Release:	3
+Version:	15.08.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
@@ -23,6 +23,12 @@ BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5KDELibs4Support)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(Qt5Xml)
+BuildRequires:	cmake(Qt5XmlPatterns)
+BuildRequires:	cmake(Qt5Test)
 
 %description
 Cantor is a KDE Application aimed to provide a nice Interface
