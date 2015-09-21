@@ -112,7 +112,8 @@ Files needed to build applications based on %{name}.
 
 %prep
 %setup -q
-%cmake_kde5
+# looks for python and python3 rather than python2 and 3
+%cmake_kde5 -DPYTHON_EXECUTABLE=%__python2
 
 %build
 %ninja -C build
