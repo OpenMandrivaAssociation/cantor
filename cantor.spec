@@ -8,14 +8,13 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	analitza-devel
-BuildRequires:	kdelibs-devel
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(libspectre)
 BuildRequires:	pkgconfig(libqalculate)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(python2)
 BuildRequires:	pkgconfig(luajit)
+BuildRequires:	cmake(Analitza5)
 BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5Pty)
 BuildRequires:	cmake(KF5Config)
@@ -46,7 +45,13 @@ Backends.
 %{_libdir}/libcantor_config.so
 %{_libdir}/libcantor_pythonbackend.so
 %{_sysconfdir}/xdg/cantor*
-%_qt5_plugindir/*cantor*.so
+%dir %{_qt5_plugindir}/plugins/cantor
+%dir %{_qt5_plugindir}/plugins/cantor/assistants
+%dir %{_qt5_plugindir}/plugins/cantor/backends
+%dir %{_qt5_plugindir}/plugins/cantor/panels
+%{_qt5_plugindir}/plugins/cantor/assistants/cantor*.so
+%{_qt5_plugindir}/plugins/cantor/backends/cantor*.so
+%{_qt5_plugindir}/plugins/cantor/panels/cantor*.so
 %{_datadir}/applications/org.kde.cantor.desktop
 %{_datadir}/cantor
 %{_iconsdir}/*/*/apps/cantor.*
@@ -58,6 +63,7 @@ Backends.
 %{_iconsdir}/*/*/apps/rbackend.png
 %{_iconsdir}/*/*/apps/sagebackend.png
 %{_iconsdir}/*/*/apps/scilabbackend.png
+%{_iconsdir}/*/*/apps/kalgebrabackend.png
 %{_datadir}/appdata/org.kde.cantor.appdata.xml
 %{_datadir}/config.kcfg/cantor.kcfg
 %{_datadir}/config.kcfg/cantor_libs.kcfg
@@ -71,10 +77,6 @@ Backends.
 %{_datadir}/config.kcfg/rserver.kcfg
 %{_datadir}/config.kcfg/sagebackend.kcfg
 %{_datadir}/config.kcfg/scilabbackend.kcfg
-%{_datadir}/kservices5/cantor
-%{_datadir}/kservicetypes5/cantor_assistant.desktop
-%{_datadir}/kservicetypes5/cantor_backend.desktop
-%{_datadir}/kservicetypes5/cantor_panelplugin.desktop
 %{_datadir}/kxmlgui5/cantor
 
 #---------------------------------------------
@@ -114,7 +116,7 @@ Files needed to build applications based on %{name}.
 %prep
 %setup -q
 # looks for python and python3 rather than python2 and 3
-%cmake_kde5 -DPYTHON_EXECUTABLE=%__python2
+%cmake_kde5 -DPYTHON_EXECUTABLE=%{__python2}
 
 %build
 %ninja -C build
