@@ -52,6 +52,7 @@ Backends.
 %{_qt5_plugindir}/cantor/assistants/cantor*.so
 %{_qt5_plugindir}/cantor/backends/cantor*.so
 %{_qt5_plugindir}/cantor/panels/cantor*.so
+%{_qt5_plugindir}/libcantorpart.so
 %{_datadir}/applications/org.kde.cantor.desktop
 %{_datadir}/cantor
 %{_iconsdir}/*/*/apps/cantor.*
