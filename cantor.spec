@@ -45,13 +45,13 @@ Backends.
 %{_libdir}/libcantor_config.so
 %{_libdir}/libcantor_pythonbackend.so
 %{_sysconfdir}/xdg/cantor*
-%dir %{_qt5_plugindir}/plugins/cantor
-%dir %{_qt5_plugindir}/plugins/cantor/assistants
-%dir %{_qt5_plugindir}/plugins/cantor/backends
-%dir %{_qt5_plugindir}/plugins/cantor/panels
-%{_qt5_plugindir}/plugins/cantor/assistants/cantor*.so
-%{_qt5_plugindir}/plugins/cantor/backends/cantor*.so
-%{_qt5_plugindir}/plugins/cantor/panels/cantor*.so
+%dir %{_qt5_plugindir}/cantor
+%dir %{_qt5_plugindir}/cantor/assistants
+%dir %{_qt5_plugindir}/cantor/backends
+%dir %{_qt5_plugindir}/cantor/panels
+%{_qt5_plugindir}/cantor/assistants/cantor*.so
+%{_qt5_plugindir}/cantor/backends/cantor*.so
+%{_qt5_plugindir}/cantor/panels/cantor*.so
 %{_datadir}/applications/org.kde.cantor.desktop
 %{_datadir}/cantor
 %{_iconsdir}/*/*/apps/cantor.*
