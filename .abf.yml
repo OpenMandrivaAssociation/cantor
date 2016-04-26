@@ -1,4 +1,2 @@
-removed_sources:
-  cantor-15.04.3.tar.xz: fdb9897a63561e6b3cda11dccc971bc674ea6a67
 sources:
-  cantor-15.12.3.tar.xz: 21be072ca5079a3bf78f6ca513fc9c9ff12e5863
+  cantor-16.04.0.tar.xz: 18c93ec173c48cd44a16b8d58d3f22404470fc33
