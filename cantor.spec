@@ -9,11 +9,11 @@ Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(libR)
+BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(libspectre)
 BuildRequires:	pkgconfig(libqalculate)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(python2)
-BuildRequires:	pkgconfig(luajit)
 BuildRequires:	cmake(Analitza5)
 BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5Pty)
