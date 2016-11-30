@@ -83,20 +83,20 @@ Backends.
 
 #---------------------------------------------
 
-%define cantorlibs_major 6
+%define cantorlibs_major 16
 %define libcantorlibs %mklibname cantorlibs %{cantorlibs_major}
 
 %package -n %{libcantorlibs}
 Summary:	Runtime library for cantor
 Group:		System/Libraries
 Obsoletes:	%{mklibname cantorlibs 0} < %{EVRD}
+Obsoletes:	%{mklibname cantorlibs 6} < %{EVRD}
 
 %description -n %{libcantorlibs}
 Runtime library for cantor.
 
 %files -n %{libcantorlibs}
-%{_libdir}/libcantorlibs.so.0*
-%{_libdir}/libcantorlibs.so.%{cantorlibs_major}
+%{_libdir}/libcantorlibs.so.%{cantorlibs_major}*
 
 #---------------------------------------------
 
