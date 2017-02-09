@@ -2,12 +2,13 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	16.12.1
+Version:	16.12.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		cantor-16.12.2-compile.patch
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(luajit)
@@ -66,7 +67,6 @@ Backends.
 %{_iconsdir}/*/*/apps/sagebackend.png
 %{_iconsdir}/*/*/apps/scilabbackend.png
 %{_iconsdir}/*/*/apps/kalgebrabackend.png
-%{_datadir}/appdata/org.kde.cantor.appdata.xml
 %{_datadir}/config.kcfg/cantor.kcfg
 %{_datadir}/config.kcfg/cantor_libs.kcfg
 %{_datadir}/config.kcfg/kalgebrabackend.kcfg
@@ -80,6 +80,8 @@ Backends.
 %{_datadir}/config.kcfg/sagebackend.kcfg
 %{_datadir}/config.kcfg/scilabbackend.kcfg
 %{_datadir}/kxmlgui5/cantor
+%{_datadir}/icons/hicolor/48x48/apps/juliabackend.png
+%{_datadir}/metainfo/org.kde.cantor.appdata.xml
 
 #---------------------------------------------
 
@@ -117,6 +119,7 @@ Files needed to build applications based on %{name}.
 
 %prep
 %setup -q
+%apply_patches
 # Hardcoded old version path...
 sed -i -e 's,luajit-2.0,luajit-2.1,g' src/backends/lua/*.{cpp,h}
 # looks for python and python3 rather than python2 and 3
