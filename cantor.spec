@@ -2,7 +2,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	16.12.2
+Version:	17.03.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -85,7 +85,7 @@ Backends.
 
 #---------------------------------------------
 
-%define cantorlibs_major 16
+%define cantorlibs_major 17
 %define libcantorlibs %mklibname cantorlibs %{cantorlibs_major}
 
 %package -n %{libcantorlibs}
