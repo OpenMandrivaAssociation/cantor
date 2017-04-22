@@ -2,7 +2,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -38,7 +38,7 @@ for doing Mathematics and Scientific Computing. It doesn't implement
 its own Computation Logic, but instead is built around different
 Backends.
 
-%files
+%files -f cantor.lang
 %doc README TODO
 %doc %{_docdir}/HTML/en/cantor
 %{_bindir}/cantor
@@ -82,6 +82,19 @@ Backends.
 %{_datadir}/kxmlgui5/cantor
 %{_datadir}/icons/hicolor/48x48/apps/juliabackend.png
 %{_datadir}/metainfo/org.kde.cantor.appdata.xml
+%lang(ca) %doc %{_docdir}/HTML/ca/cantor
+%lang(de) %doc %{_docdir}/HTML/de/cantor
+%lang(es) %doc %{_docdir}/HTML/es/cantor
+%lang(et) %doc %{_docdir}/HTML/et/cantor
+%lang(fr) %doc %{_docdir}/HTML/fr/cantor
+%lang(gl) %doc %{_docdir}/HTML/gl/cantor
+%lang(it) %doc %{_docdir}/HTML/it/cantor
+%lang(nl) %doc %{_docdir}/HTML/nl/cantor
+%lang(pt) %doc %{_docdir}/HTML/pt/cantor
+%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/cantor
+%lang(ru) %doc %{_docdir}/HTML/ru/cantor
+%lang(sv) %doc %{_docdir}/HTML/sv/cantor
+%lang(uk) %doc %{_docdir}/HTML/uk/cantor
 
 #---------------------------------------------
 
@@ -130,3 +143,4 @@ sed -i -e 's,luajit-2.0,luajit-2.1,g' src/backends/lua/*.{cpp,h}
 
 %install
 %ninja_install -C build
+%find_lang cantor
