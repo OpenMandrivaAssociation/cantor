@@ -31,6 +31,7 @@ BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5XmlPatterns)
 BuildRequires:	cmake(Qt5Test)
+BuildRequires:	julia-devel
 
 %description
 Cantor is a KDE Application aimed to provide a nice Interface
