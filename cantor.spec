@@ -1,3 +1,7 @@
+# Currently julia lives in contrib and cantor lives in main
+# Got to disable Julia support by default until one of them moves
+%bcond_with julia
+
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
@@ -31,7 +35,9 @@ BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5XmlPatterns)
 BuildRequires:	cmake(Qt5Test)
+%if %{with julia}
 BuildRequires:	julia-devel
+%endif
 
 %description
 Cantor is a KDE Application aimed to provide a nice Interface
@@ -43,7 +49,10 @@ Backends.
 %doc README TODO
 %doc %{_docdir}/HTML/en/cantor
 %{_bindir}/cantor
+%if %{with julia}
 %{_bindir}/cantor_juliaserver
+%{_datadir}/config.kcfg/juliabackend.kcfg
+%endif
 %{_bindir}/cantor_python3server
 %{_bindir}/cantor_rserver
 %{_libdir}/libcantor_config.so
@@ -72,7 +81,6 @@ Backends.
 %{_datadir}/config.kcfg/cantor.kcfg
 %{_datadir}/config.kcfg/cantor_libs.kcfg
 %{_datadir}/config.kcfg/kalgebrabackend.kcfg
-%{_datadir}/config.kcfg/juliabackend.kcfg
 %{_datadir}/config.kcfg/luabackend.kcfg
 %{_datadir}/config.kcfg/maximabackend.kcfg
 %{_datadir}/config.kcfg/octavebackend.kcfg
