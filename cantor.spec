@@ -13,6 +13,7 @@ Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		cantor-16.12.2-compile.patch
+Patch1:		cantor-17.12.2-python3.7.patch
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(luajit)
