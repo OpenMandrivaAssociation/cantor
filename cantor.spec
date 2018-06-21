@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	 17.12.2
+Version:	18.04.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -50,6 +50,7 @@ Backends.
 %doc README TODO
 %doc %{_docdir}/HTML/en/cantor
 %{_bindir}/cantor
+%{_bindir}/cantor_scripteditor
 %if %{with julia}
 %{_bindir}/cantor_juliaserver
 %{_datadir}/config.kcfg/juliabackend.kcfg
@@ -110,7 +111,7 @@ Backends.
 
 #---------------------------------------------
 
-%define cantorlibs_major 17
+%define cantorlibs_major 18
 %define libcantorlibs %mklibname cantorlibs %{cantorlibs_major}
 
 %package -n %{libcantorlibs}
@@ -118,6 +119,7 @@ Summary:	Runtime library for cantor
 Group:		System/Libraries
 Obsoletes:	%{mklibname cantorlibs 0} < %{EVRD}
 Obsoletes:	%{mklibname cantorlibs 6} < %{EVRD}
+Obsoletes:	%{mklibname cantorlibs 17} < %{EVRD}
 
 %description -n %{libcantorlibs}
 Runtime library for cantor.
