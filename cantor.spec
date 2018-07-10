@@ -6,14 +6,13 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	18.04.2
+Version:	18.04.3
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		cantor-16.12.2-compile.patch
-Patch1:		cantor-17.12.2-python3.7.patch
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(luajit)
@@ -47,7 +46,7 @@ its own Computation Logic, but instead is built around different
 Backends.
 
 %files -f cantor.lang
-%doc README TODO
+%doc TODO
 %doc %{_docdir}/HTML/en/cantor
 %{_bindir}/cantor
 %{_bindir}/cantor_scripteditor
