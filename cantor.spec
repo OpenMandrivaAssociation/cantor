@@ -6,8 +6,8 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	18.12.3
-Release:	2
+Version:	19.04.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
@@ -129,6 +129,7 @@ Files needed to build applications based on %{name}.
 %files devel
 %{_libdir}/libcantorlibs.so
 %{_includedir}/%{name}
+%{_libdir}/cmake/Cantor
 
 #----------------------------------------------------------------------
 
