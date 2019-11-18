@@ -6,12 +6,13 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	19.08.3
+Version:	19.11.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		cantor-19.11.80-compile.patch
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(luajit)
@@ -96,7 +97,7 @@ Backends.
 
 #---------------------------------------------
 
-%define cantorlibs_major 23
+%define cantorlibs_major 24
 %define libcantorlibs %mklibname cantorlibs %{cantorlibs_major}
 
 %package -n %{libcantorlibs}
@@ -108,6 +109,9 @@ Obsoletes:	%{mklibname cantorlibs 17} < %{EVRD}
 Obsoletes:	%{mklibname cantorlibs 18} < %{EVRD}
 Obsoletes:	%{mklibname cantorlibs 19} < %{EVRD}
 Obsoletes:	%{mklibname cantorlibs 20} < %{EVRD}
+Obsoletes:	%{mklibname cantorlibs 21} < %{EVRD}
+Obsoletes:	%{mklibname cantorlibs 22} < %{EVRD}
+Obsoletes:	%{mklibname cantorlibs 23} < %{EVRD}
 
 %description -n %{libcantorlibs}
 Runtime library for cantor.
@@ -135,8 +139,7 @@ Files needed to build applications based on %{name}.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 # Hardcoded old version path...
 sed -i -e 's,luajit-2.0,luajit-2.1,g' src/backends/lua/*.{cpp,h}
 # looks for python and python3 rather than python2 and 3
