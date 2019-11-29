@@ -6,13 +6,12 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	19.11.80
+Version:	19.11.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/cantor/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		cantor-19.11.80-compile.patch
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(luajit)
