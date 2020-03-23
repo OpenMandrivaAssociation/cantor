@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	19.12.3
+Version:	20.03.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -48,16 +48,15 @@ Backends.
 
 %files -f cantor.lang
 %{_bindir}/cantor
-%{_bindir}/cantor_python2server
+%{_bindir}/cantor_pythonserver
 %{_bindir}/cantor_scripteditor
 %if %{with julia}
 %{_bindir}/cantor_juliaserver
 %{_datadir}/config.kcfg/juliabackend.kcfg
 %endif
-%{_bindir}/cantor_python3server
 %{_bindir}/cantor_rserver
 %{_libdir}/libcantor_config.so
-%{_libdir}/libcantor_pythonbackend.so
+%{_libdir}/cantor_pythonbackend.so
 %{_sysconfdir}/xdg/cantor*
 %dir %{_qt5_plugindir}/cantor
 %dir %{_qt5_plugindir}/cantor/assistants
@@ -85,8 +84,7 @@ Backends.
 %{_datadir}/config.kcfg/luabackend.kcfg
 %{_datadir}/config.kcfg/maximabackend.kcfg
 %{_datadir}/config.kcfg/octavebackend.kcfg
-%{_datadir}/config.kcfg/python2backend.kcfg
-%{_datadir}/config.kcfg/python3backend.kcfg
+%{_datadir}/config.kcfg/pythonbackend.kcfg
 %{_datadir}/config.kcfg/qalculatebackend.kcfg
 %{_datadir}/config.kcfg/rserver.kcfg
 %{_datadir}/config.kcfg/sagebackend.kcfg
