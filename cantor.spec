@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	20.08.2
+Version:	20.08.3
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -141,8 +141,8 @@ Files needed to build applications based on %{name}.
 %autosetup -p1
 # Hardcoded old version path...
 sed -i -e 's,luajit-2.0,luajit-2.1,g' src/backends/lua/*.{cpp,h}
-# looks for python and python3 rather than python2 and 3
-%cmake_kde5 -DPYTHON_EXECUTABLE=%{__python2}
+%cmake_kde5 \
+	-DPYTHONLIBS3_LIBRARY=$(ls -1 %{_libdir}/libpython3.[0-9]*.so |tail -n1)
 
 %build
 %ninja -C build
