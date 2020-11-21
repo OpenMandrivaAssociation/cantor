@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	20.08.3
+Version:	20.11.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -57,7 +57,7 @@ Backends.
 %{_bindir}/cantor_rserver
 %{_libdir}/libcantor_config.so
 %{_libdir}/cantor_pythonbackend.so
-%{_sysconfdir}/xdg/cantor*
+%{_datadir}/knsrcfiles/cantor*
 %dir %{_qt5_plugindir}/cantor
 %dir %{_qt5_plugindir}/cantor/assistants
 %dir %{_qt5_plugindir}/cantor/backends
@@ -95,7 +95,7 @@ Backends.
 
 #---------------------------------------------
 
-%define cantorlibs_major 27
+%define cantorlibs_major 28
 %define libcantorlibs %mklibname cantorlibs %{cantorlibs_major}
 
 %package -n %{libcantorlibs}
@@ -111,6 +111,7 @@ Obsoletes:	%{mklibname cantorlibs 21} < %{EVRD}
 Obsoletes:	%{mklibname cantorlibs 22} < %{EVRD}
 Obsoletes:	%{mklibname cantorlibs 23} < %{EVRD}
 Obsoletes:	%{mklibname cantorlibs 24} < %{EVRD}
+Obsoletes:	%{mklibname cantorlibs 27} < %{EVRD}
 
 %description -n %{libcantorlibs}
 Runtime library for cantor.
