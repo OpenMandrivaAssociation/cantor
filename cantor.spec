@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -67,7 +67,7 @@ Backends.
 %{_qt5_plugindir}/cantor/assistants/cantor*.so
 %{_qt5_plugindir}/cantor/backends/cantor*.so
 %{_qt5_plugindir}/cantor/panels/cantor*.so
-%{_qt5_plugindir}/libcantorpart.so
+%{_qt5_plugindir}/kf5/parts/cantorpart.so
 %{_datadir}/applications/org.kde.cantor.desktop
 %{_datadir}/cantor
 %{_iconsdir}/*/*/apps/cantor.*
@@ -85,7 +85,7 @@ Backends.
 %{_datadir}/config.kcfg/kalgebrabackend.kcfg
 %{_datadir}/config.kcfg/luabackend.kcfg
 %{_datadir}/config.kcfg/maximabackend.kcfg
-%{_datadir}/config.kcfg/octavebackend.kcfg
+%{_datadir}/config.kcfg/octavebackend.kcfg.in
 %{_datadir}/config.kcfg/pythonbackend.kcfg
 %{_datadir}/config.kcfg/qalculatebackend.kcfg
 %{_datadir}/config.kcfg/rserver.kcfg
