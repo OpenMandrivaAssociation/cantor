@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	21.07.80
+Version:	21.07.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -37,6 +37,7 @@ BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5XmlPatterns)
 BuildRequires:	cmake(Qt5Test)
+BuildRequires:	cmake(Qt5Help)
 %if %{with julia}
 BuildRequires:	julia-devel
 %endif
