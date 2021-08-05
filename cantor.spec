@@ -38,6 +38,8 @@ BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5XmlPatterns)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Help)
+# For qhelpgenerator
+BuildRequires:	qt5-assistant
 %if %{with julia}
 BuildRequires:	julia-devel
 %endif
