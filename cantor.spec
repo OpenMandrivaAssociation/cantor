@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	23.08.1
+Version:	23.08.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -18,7 +18,6 @@ BuildRequires:	pkgconfig(luajit)
 BuildRequires:	pkgconfig(libspectre)
 BuildRequires:	pkgconfig(libqalculate)
 BuildRequires:	pkgconfig(python3)
-BuildRequires:	pkgconfig(python2)
 BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	cmake(Analitza5)
