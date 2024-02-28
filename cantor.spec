@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	23.08.5
+Version:	24.02.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -95,7 +95,6 @@ Backends.
 %{_datadir}/config.kcfg/rserver.kcfg
 %{_datadir}/config.kcfg/sagebackend.kcfg
 %{_datadir}/config.kcfg/scilabbackend.kcfg
-%{_datadir}/kxmlgui5/cantor
 %{_datadir}/icons/hicolor/48x48/apps/juliabackend.png
 %{_datadir}/metainfo/org.kde.cantor.appdata.xml
 
