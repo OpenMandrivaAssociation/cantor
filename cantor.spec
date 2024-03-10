@@ -39,6 +39,7 @@ BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Help)
 BuildRequires:	cmake(Qt5WebEngine)
 BuildRequires:	cmake(Qt5WebEngineWidgets)
+BuildRequires:	R R-core
 # For qhelpgenerator
 BuildRequires:	qt5-assistant
 %if %{with julia}
