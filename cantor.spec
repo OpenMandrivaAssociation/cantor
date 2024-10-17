@@ -10,7 +10,7 @@ Version:	24.02.0
 Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://edu.kde.org/cantor/
+Url:		https://edu.kde.org/cantor/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(lua)
