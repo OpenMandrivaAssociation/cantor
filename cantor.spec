@@ -68,14 +68,14 @@ Backends.
 %{_libdir}/cantor_pythonbackend.so
 %{_datadir}/mime/packages/cantor.xml
 %{_datadir}/knsrcfiles/cantor*
-%dir %{_qt6_plugindir}/cantor
-%dir %{_qt6_plugindir}/cantor/assistants
-%dir %{_qt6_plugindir}/cantor/backends
-%dir %{_qt6_plugindir}/cantor/panels
-%{_qt6_plugindir}/cantor/assistants/cantor*.so
-%{_qt6_plugindir}/cantor/backends/cantor*.so
-%{_qt6_plugindir}/cantor/panels/cantor*.so
-%{_qt6_plugindir}/kf6/parts/cantorpart.so
+%dir %{_libdir}/plugins/cantor_plugins/
+%dir %{_libdir}/plugins/cantor_plugins/assistants
+%dir %{_libdir}/plugins/cantor_plugins/backends
+%dir %{_libdir}/plugins/cantor_plugins/panels
+%{_libdir}/plugins/cantor_plugins/assistants/cantor*.so
+%{_libdir}/plugins/cantor_plugins/backends/cantor*.so
+%{_libdir}/plugins/cantor_plugins/panels/cantor*.so
+%{_libdir}/plugins/kf6/parts/cantorpart.so
 %{_datadir}/applications/org.kde.cantor.desktop
 %{_datadir}/cantor
 %{_iconsdir}/*/*/apps/cantor.*
