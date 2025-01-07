@@ -6,42 +6,45 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	24.02.0
-Release:	3
+Version:	24.12.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://edu.kde.org/cantor/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	cmake ninja
 BuildRequires:	pkgconfig(libR)
 BuildRequires:	pkgconfig(lua)
 BuildRequires:	pkgconfig(luajit)
 BuildRequires:	pkgconfig(libspectre)
 BuildRequires:	pkgconfig(libqalculate)
 BuildRequires:	pkgconfig(python3)
-BuildRequires:	pkgconfig(poppler-qt5)
+BuildRequires:	pkgconfig(poppler-qt6)
 BuildRequires:	pkgconfig(shared-mime-info)
-BuildRequires:	cmake(Analitza5)
-BuildRequires:	cmake(KF5TextEditor)
-BuildRequires:	cmake(KF5Pty)
-BuildRequires:	cmake(KF5Config)
-BuildRequires:	cmake(KF5NewStuff)
-BuildRequires:	cmake(KF5CoreAddons)
-BuildRequires:	cmake(KF5Archive)
-BuildRequires:	cmake(KF5Parts)
-BuildRequires:	cmake(KF5KDELibs4Support)
-BuildRequires:	cmake(KF5SyntaxHighlighting)
-BuildRequires:	cmake(Qt5Core)
-BuildRequires:	cmake(Qt5Widgets)
-BuildRequires:	cmake(Qt5Svg)
-BuildRequires:	cmake(Qt5Xml)
-BuildRequires:	cmake(Qt5XmlPatterns)
-BuildRequires:	cmake(Qt5Test)
-BuildRequires:	cmake(Qt5Help)
-BuildRequires:	cmake(Qt5WebEngine)
-BuildRequires:	cmake(Qt5WebEngineWidgets)
+BuildRequires:	cmake(Analitza6)
+BuildRequires:	cmake(KF6TextEditor)
+BuildRequires:	cmake(KF6Pty)
+BuildRequires:	cmake(KF6Config)
+BuildRequires:	cmake(KF6NewStuff)
+BuildRequires:	cmake(KF6CoreAddons)
+BuildRequires:	cmake(KF6Archive)
+BuildRequires:	cmake(KF6Parts)
+#BuildRequires:	cmake(KF6KDELibs4Support)
+BuildRequires:	cmake(KF6SyntaxHighlighting)
+BuildRequires:	cmake(KF6TextWidgets)
+BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6Xml)
+#BuildRequires:	cmake(Qt6XmlPatterns)
+BuildRequires:	cmake(Qt6Test)
+BuildRequires:	cmake(Qt6Help)
+#BuildRequires:	cmake(Qt6WebEngine)
+BuildRequires:	cmake(Qt6WebEngineCore)
+BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	R R-core
 # For qhelpgenerator
-BuildRequires:	qt5-assistant
+BuildRequires:	qt6-qttools-assistant
 %if %{with julia}
 BuildRequires:	julia-devel
 %endif
@@ -65,14 +68,14 @@ Backends.
 %{_libdir}/cantor_pythonbackend.so
 %{_datadir}/mime/packages/cantor.xml
 %{_datadir}/knsrcfiles/cantor*
-%dir %{_qt5_plugindir}/cantor
-%dir %{_qt5_plugindir}/cantor/assistants
-%dir %{_qt5_plugindir}/cantor/backends
-%dir %{_qt5_plugindir}/cantor/panels
-%{_qt5_plugindir}/cantor/assistants/cantor*.so
-%{_qt5_plugindir}/cantor/backends/cantor*.so
-%{_qt5_plugindir}/cantor/panels/cantor*.so
-%{_qt5_plugindir}/kf5/parts/cantorpart.so
+%dir %{_qt6_plugindir}/cantor
+%dir %{_qt6_plugindir}/cantor/assistants
+%dir %{_qt6_plugindir}/cantor/backends
+%dir %{_qt6_plugindir}/cantor/panels
+%{_qt6_plugindir}/cantor/assistants/cantor*.so
+%{_qt6_plugindir}/cantor/backends/cantor*.so
+%{_qt6_plugindir}/cantor/panels/cantor*.so
+%{_qt6_plugindir}/kf6/parts/cantorpart.so
 %{_datadir}/applications/org.kde.cantor.desktop
 %{_datadir}/cantor
 %{_iconsdir}/*/*/apps/cantor.*
@@ -148,8 +151,9 @@ Files needed to build applications based on %{name}.
 %autosetup -p1
 # Hardcoded old version path...
 sed -i -e 's,luajit-2.0,luajit-2.1,g' src/backends/lua/*.{cpp,h}
-%cmake_kde5 \
-	-DPYTHONLIBS3_LIBRARY=$(ls -1 %{_libdir}/libpython3.[0-9]*.so |tail -n1)
+%cmake \
+	-DPYTHONLIBS3_LIBRARY=$(ls -1 %{_libdir}/libpython3.[0-9]*.so |tail -n1) \
+	-GNinja
 
 %build
 %ninja -C build
