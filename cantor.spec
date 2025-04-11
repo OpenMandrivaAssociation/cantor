@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	24.12.0
+Version:	24.12.3
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -33,6 +33,9 @@ BuildRequires:	cmake(KF6Parts)
 BuildRequires:	cmake(KF6SyntaxHighlighting)
 BuildRequires:	cmake(KF6TextWidgets)
 BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6Core5Compat)
+BuildRequires:	cmake(Qt6QmlCore)
+BuildRequires:	cmake(Qt6QmlLocalStorage)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6Xml)
@@ -69,9 +72,9 @@ Backends.
 %{_datadir}/mime/packages/cantor.xml
 %{_datadir}/knsrcfiles/cantor*
 %dir %{_libdir}/plugins/cantor_plugins/
-%dir %{_libdir}/plugins/cantor_plugins/assistants
-%dir %{_libdir}/plugins/cantor_plugins/backends
-%dir %{_libdir}/plugins/cantor_plugins/panels
+#dir %{_libdir}/plugins/cantor_plugins/assistants
+#dir %{_libdir}/plugins/cantor_plugins/backends
+#dir %{_libdir}/plugins/cantor_plugins/panels
 %{_libdir}/plugins/cantor_plugins/assistants/cantor*.so
 %{_libdir}/plugins/cantor_plugins/backends/cantor*.so
 %{_libdir}/plugins/cantor_plugins/panels/cantor*.so
@@ -151,7 +154,7 @@ Files needed to build applications based on %{name}.
 %autosetup -p1
 # Hardcoded old version path...
 sed -i -e 's,luajit-2.0,luajit-2.1,g' src/backends/lua/*.{cpp,h}
-%cmake \
+%cmake -Wno-dev \
 	-DPYTHONLIBS3_LIBRARY=$(ls -1 %{_libdir}/libpython3.[0-9]*.so |tail -n1) \
 	-GNinja
 
