@@ -44,7 +44,7 @@ BuildRequires:	cmake(Qt6Xml)
 #BuildRequires:	cmake(Qt6XmlPatterns)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6Help)
-#BuildRequires:	cmake(Qt6WebEngine)
+BuildRequires:	cmake(Qt6Tools)
 BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	R R-core
