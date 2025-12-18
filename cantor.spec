@@ -6,7 +6,7 @@
 
 Summary:	KDE Interface for doing Mathematics and Scientific Computing
 Name:		cantor
-Version:	25.08.3
+Version:	25.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -73,14 +73,14 @@ Backends.
 %{_libdir}/cantor_pythonbackend.so
 %{_datadir}/mime/packages/cantor.xml
 %{_datadir}/knsrcfiles/cantor*
-%dir %{_libdir}/plugins/cantor_plugins/
-#dir %{_libdir}/plugins/cantor_plugins/assistants
-#dir %{_libdir}/plugins/cantor_plugins/backends
-#dir %{_libdir}/plugins/cantor_plugins/panels
-%{_libdir}/plugins/cantor_plugins/assistants/cantor*.so
-%{_libdir}/plugins/cantor_plugins/backends/cantor*.so
-%{_libdir}/plugins/cantor_plugins/panels/cantor*.so
-%{_libdir}/plugins/kf6/parts/cantorpart.so
+%dir %{_qtdir}/plugins/cantor_plugins/
+#dir %{_qtdir}/plugins/cantor_plugins/assistants
+#dir %{_qtdir}/plugins/cantor_plugins/backends
+#dir %{_qtdir}/plugins/cantor_plugins/panels
+%{_qtdir}/plugins/cantor_plugins/assistants/cantor*.so
+%{_qtdir}/plugins/cantor_plugins/backends/cantor*.so
+%{_qtdir}/plugins/cantor_plugins/panels/cantor*.so
+%{_qtdir}/plugins/kf6/parts/cantorpart.so
 %{_datadir}/applications/org.kde.cantor.desktop
 %{_datadir}/cantor
 %{_iconsdir}/*/*/apps/cantor.*
